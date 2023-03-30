@@ -1019,7 +1019,7 @@ means that `company-mode' is always turned on except in `message-mode' buffers."
 (defvar company-emulation-alist '((t . nil)))
 
 (defun company-enable-overriding-keymap (keymap)
-  (company-uninstall-map)
+  ;; (company-uninstall-map)
   (setq company-my-keymap keymap))
 
 (defun company-ensure-emulation-alist ()
