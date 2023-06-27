@@ -1323,8 +1323,7 @@ can retrieve meta-data for them."
 
 (defun company--should-complete ()
   (and (eq company-idle-delay 'now)
-       (not (or buffer-read-only
-                overriding-local-map))
+       (not buffer-read-only)
        ;; Check if in the middle of entering a key combination.
        (or (equal (this-command-keys-vector) [])
            (not (keymapp (key-binding (this-command-keys-vector)))))
